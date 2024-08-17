@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 기반 피부 증상 분석 서비스</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI 기반 피부 증상 분석 서비스</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="file-upload">
+                <input type="file" name="file" id="file" accept="image/*" required>
+                <label for="file">이미지 업로드</label>
+            </div>
+            <button type="submit">분석하기</button>
+        </form>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분석 결과 - AI 기반 피부 증상 분석 서비스</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>분석 결과</h1>
+        <div class="result">
+            <h2>AI 분석 결과: <strong>{{ label }}</strong></h2>
+            <h3>추천 해결책:</h3>
+            <p>{{ solution }}</p>
+        </div>
+        <div class="feedback">
+            <h2>피드백</h2>
+            <p>AI의 진단 결과가 정확했나요?</p>
+            <form action="/feedback" method="post">
+                <label>
+                    <input type="radio" name="feedback" value="yes" required> 예
+                </label>
+                <label>
+                    <input type="radio" name="feedback" value="no"> 아니오
+                </label>
+                <textarea name="additional_feedback" placeholder="추가 의견을 남겨주세요..."></textarea>
+                <button type="submit">피드백 제출</button>
+            </form>
+        </div>
+        <a href="/" class="button">다른 이미지 분석하기</a>
+    </div>
+</body>
+</html>
