@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 기반 피부 증상 분석 서비스</title>
+    <title>홈 - AI 피부 증상 분석 서비스</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <!-- 로고 추가 -->
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AI 피부 분석 로고" style="width: 300px; margin-bottom: 5px;">
+            <h1>AI 알고리즘 기반 피부 증상 분석 서비스</h1>
+            <p>CNN(DenseNet) 알고리즘을 이용하여 당신의 피부질환을 분석하고 맞춤형 해결책을 제공합니다.</p>
+        </div>
+        <!-- 네비게이션 바 추가 -->
+        <nav class="navbar">
+            <a href="{{ url_for('index') }}" class="nav-button">홈</a>
+            <a href="{{ url_for('disease') }}" class="nav-button">질환 설명</a>
+            <a href="{{ url_for('mypage') }}" class="nav-button">마이페이지</a>
+        </nav>        
+    </header>
+    
+    
     <div class="container">
-        <h1>AI 기반 피부 증상 분석 서비스</h1>
+        <div class="instructions">
+            <h2>이용 방법</h2>
+            <p>아래의 버튼을 클릭하여 피부질환이 있는 얼굴 환부 이미지 파일을 업로드하세요. 안경을 벗고 촬영해야 정확도가 향상됩니다. <br><br> AI가 자동으로 분석하여 당신의 피부질환을 분석하고 맞춤형 솔루션을 제공합니다.</p>
+
+            <br>
+
+            <p>이미지를 업로드한 후 '분석하기' 버튼을 클릭하면 분석결과를 확인할 수 있습니다.</p>
+        </div>
         <form action="/" method="post" enctype="multipart/form-data">
             <div class="file-upload">
                 <input type="file" name="file" id="file" accept="image/*" required>
@@ -20,6 +43,11 @@
         <p class="error">{{ error }}</p>
         {% endif %}
     </div>
+
+    <footer>
+        <p>&copy; 2024 What's on My Skin. All rights reserved.</p>
+    </footer>
+
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

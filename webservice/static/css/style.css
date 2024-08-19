@@ -1,124 +1,177 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3295a8;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .header-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header .header-content p {
+    font-size: 18px;
+    margin-top: 0;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
     padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    color: #333;
-    text-align: center;
+h2, h3 {
+    color: #3295a8;
 }
 
 form {
-    background: #fff;
-    padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
 }
 
 .file-upload {
-    position: relative;
-    overflow: hidden;
-    margin: 10px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .file-upload input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+    display: none;
 }
 
 .file-upload label {
     display: inline-block;
-    padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
+    padding: 12px 24px;
+    background-color: #3295a8;
+    color: white;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.file-upload label:hover {
+    background-color: #54d4ee;
 }
 
 button {
-    display: block;
     width: 100%;
-    padding: 10px;
-    background: #3498db;
-    color: #fff;
+    padding: 14px;
+    background-color: #a0a3a1;
+    color: white;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #2980b9;
+    background-color: #cfcfd2;
 }
 
 .error {
-    color: red;
+    color: #e74c3c;
     text-align: center;
+    font-size: 14px;
 }
 
-.feedback {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+.result, .feedback {
+    margin-bottom: 50px;
 }
 
-textarea {
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.feedback input[type="radio"] {
+    margin-right: 10px;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background: #3498db;
-    color: #fff;
+    padding: 12px 24px;
+    background-color: #3295a8;
+    color: white;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 .button:hover {
-    background: #2980b9;
+    background-color: #54d4ee;
 }
 
-.result {
-    background: #fff;
+footer {
+    background-color: #5b5b5b;
+    color: white;
     padding: 20px;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* 네비게이션 버튼 스타일 추가 */
+.navbar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.nav-button {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #3295a8;
     border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
 }
 
-.result h2 {
-    color: #3498db;
+.nav-button:hover {
+    background-color: #54d4ee;
 }
 
-.result h3 {
-    margin-top: 20px;
-}
-
-.result p {
-    line-height: 1.6;
+.circular-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 20px 0 20px 20px; /* 상단 20px, 우측 0, 하단 20px, 좌측 20px 마진 */
+    border: 3px solid rgba(50, 149, 168, 1); 
 }

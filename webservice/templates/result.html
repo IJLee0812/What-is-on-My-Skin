@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>분석 결과 - AI 기반 피부 증상 분석 서비스</title>
+    <title>분석 결과 - AI 피부 증상 분석 서비스</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <div class="header-content">
+                <!-- 로고 추가 -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AI 피부 분석 로고" style="width: 300px; margin-bottom: 5px;">
+            </div>
+            <h1>AI 분석 결과</h1>
+            <p>주의사항 : 분석 결과는 참고용이며, 정확한 진단 및 치료를 위해 반드시 피부과 전문의와 상담하시기 바랍니다. AI의 결과는 의료 전문가의 진단을 대체할 수 없음에 유의하세요.</p>
+        </div>
+    </header>
+
     <div class="container">
-        <h1>분석 결과</h1>
         <div class="result">
-            <h2>AI 분석 결과: <strong>{{ label }}</strong></h2>
+            <h2>AI 분석 결과 : <strong>{{ label }}</strong></h2>
             <h3>추천 해결책:</h3>
             <p>{{ solution }}</p>
         </div>
         <div class="feedback">
             <h2>피드백</h2>
-            <p>AI의 진단 결과가 정확했나요?</p>
+            <p>AI의 진단 결과, 해결책이 만족스러우신가요?</p>
             <form action="/feedback" method="post">
                 <label>
                     <input type="radio" name="feedback" value="yes" required> 예
@@ -30,5 +40,9 @@
         </div>
         <a href="/" class="button">다른 이미지 분석하기</a>
     </div>
+
+    <footer>
+        <p>&copy; 2024 What's on My Skin. All rights reserved.</p>
+    </footer>
 </body>
 </html>

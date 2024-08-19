@@ -42,6 +42,18 @@ solutions = {
     '정상 피부': '현재 피부 상태가 양호합니다. 꾸준한 관리로 건강한 피부를 유지하세요.'
 }
 
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+@app.route('/disease')
+def disease():
+    return render_template('disease.html')
+@app.route('/mypage')
+def mypage():
+    return render_template('mypage.html')
+
+
 @app.route('/', methods=['GET', 'POST'])
 def upload_image():
     if request.method == 'POST':
@@ -65,6 +77,7 @@ def upload_image():
             return render_template('result.html', label=label, solution=solution)
     
     return render_template('index.html')
+
 
 @app.route('/feedback', methods=['POST'])
 def feedback():

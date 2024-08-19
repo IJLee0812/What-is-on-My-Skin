@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 - AI 피부 증상 분석 서비스</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AI 피부 분석 로고" style="width: 300px; margin-bottom: 5px;">
+            <h1>마이페이지(추후 제공 예정)</h1>
+        </div>
+        <nav class="navbar">
+            <a href="/" class="nav-button">홈</a>
+            <a href="/disease" class="nav-button">질환 설명</a>
+            <a href="/mypage" class="nav-button">마이페이지</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>내 분석 결과(미구현)</h2>
+        <div class="result">
+            <h3>업로드한 이미지 분석 결과(예시)</h3>
+            <p>1. 2024.08.12 00:00 </p>
+            <img src="{{ url_for('static', filename='images/user_image.jpg') }}" alt="분석 이미지" style="width: 100%; max-width: 200px; border-radius: 10px;">
+            <p>분석 결과 : 여드름 흉터(acne scar)</p>
+        </div>
+        <div class="feedback">
+            <h3>제출한 피드백(예시)</h3>
+
+            <p>1. 2024.08.12 00:00 피드백 내용</p>
+            <p> . . . </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 What's on My Skin. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
