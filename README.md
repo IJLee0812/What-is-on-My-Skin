@@ -142,7 +142,7 @@ http://127.0.0.1:5000 or http://localhost:5000
 </p>
 
 ### 5. Detailed descriptions
- > A document summarizing all the things considered during project development is located in **project_design.pdf in the results folder.**
+ > A document summarizing all the things considered during project development is **"project_plan.pdf"**
 
  ---
 
