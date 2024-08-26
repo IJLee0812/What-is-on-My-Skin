@@ -42,7 +42,7 @@ After analyzing the patient’s skin condition, the system provides the analysis
 
 ### WEBSERVICE
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
+<img src="https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white"> 
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
 <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white">
 
@@ -66,7 +66,7 @@ git clone https://github.com/IJLee0812/What-is-on-My-Skin.git
 ```plaintext
 cd What-is-on-My-Skin/webservice
 
-# pip install Flask Pillow torch torchvision -> Commands to install the tools and libraries required to run the application
+pip install Flask Pillow torch torchvision -> Commands to install the tools and libraries required to run app.py
 
 python3 app.py
 ```
