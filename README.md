@@ -141,8 +141,5 @@ http://127.0.0.1:5000 or http://localhost:5000
     <img src = "https://github.com/user-attachments/assets/477ce3cf-a8e2-4276-9d53-7b59c70f6293">
 </p>
 
-### 5. Detailed descriptions
- > A document summarizing all the things considered during project development is **"project_plan.pdf"**
-
  ---
 
