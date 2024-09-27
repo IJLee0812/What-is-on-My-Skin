@@ -4,7 +4,7 @@ import torch
 from torchvision import models, transforms
 
 # 모델 및 클래스 로드
-model_path = 'models/best_model_fold_1.pth'
+model_path = './models/best_model_fold_1.pth'
 model = models.densenet121(pretrained=False)
 model.classifier = torch.nn.Linear(model.classifier.in_features, 4)
 model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
@@ -17,7 +17,7 @@ preprocess = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-class_names_path = 'models/class_names.pth'
+class_names_path = './models/class_names.pth'
 class_names = torch.load(class_names_path)
 
 english_to_korean = {
