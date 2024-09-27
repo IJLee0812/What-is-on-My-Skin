@@ -4,7 +4,7 @@ import torch
 from torchvision import models, transforms
 
 # 모델 및 클래스 로드
-model_path = './models/best_model_fold_1.pth'
+model_path = './webservice/models/best_model_fold_1.pth'
 model = models.densenet121(pretrained=False)
 model.classifier = torch.nn.Linear(model.classifier.in_features, 4)
 model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
@@ -17,7 +17,7 @@ preprocess = transforms.Compose([
     transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
 ])
 
-class_names_path = './models/class_names.pth'
+class_names_path = './webservice/models/class_names.pth'
 class_names = torch.load(class_names_path)
 
 english_to_korean = {
@@ -39,7 +39,7 @@ solutions = {
 }
 
 # 모든 페이지 상단에 로고 이미지 중앙에 배치
-logo_path = './static/images/logo_streamlit.png'
+logo_path = './webservice/static/images/logo_streamlit.png'
 # Streamlit의 st.image를 이용해 이미지를 불러오기 (로컬 이미지)
 st.image(logo_path, width=600)  # 원하는 크기로 조정 가능
 st.markdown(
