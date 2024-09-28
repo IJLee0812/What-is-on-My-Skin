@@ -97,7 +97,7 @@ http://127.0.0.1:5000 or http://localhost:5000
 
  - Due to the limitations in the dataset size that an individual can gather, data augmentation and 5-Fold Validation techniques were applied. 
   
-### 2. Augmentation Process
+### 2. Data Preprocessing & Augmentation
 
     CenterCrop(224) -> RandomHorizontalFlip() -> RandomRotation(degrees = 20) -> ToTensor() -> Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 
