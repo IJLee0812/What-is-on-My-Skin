@@ -46,16 +46,24 @@ After analyzing the patient’s skin condition, the system provides the analysis
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
 <img src="https://img.shields.io/badge/flask-000000?style=for-the-badge&logo=flask&logoColor=white">
 
-## IV. System Usage Example
+## IV. System Usage 
+
+### 1. Localhost service (for demonstration)
 
 ![ex1](https://github.com/user-attachments/assets/a908bb23-7ff9-42d3-b92b-6726ee31bbb9)
 
-<br>
+<br> 
 
-![ex2](https://github.com/user-attachments/assets/f30ab160-01e7-4c70-979d-ac9588464298)
+### 2. Beta webservice using streamlit
+
+<a href = "https://whatisonmyskin.streamlit.app/">🌎 WEBSITE LINK : whatisonmyskin.streamlit.app</a>
+
+- Please use the website in light mode.
+
+![ex1](https://github.com/user-attachments/assets/05faf8e0-cab8-4245-9a6c-e38b97270b32)
 
 
-## V. Installation (for Webservice Testers)
+## V. Installation (for localhost test)
 
 1. Clone the repository :
 ```plaintext
