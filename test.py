@@ -12,7 +12,7 @@ from torchvision import models
 from torchvision.models import DenseNet121_Weights
 
 # Base directory for saving the model and data
-base_dir = "/content/drive/My Drive/Colab Notebooks/What-is-on-My-Skin/result"
+base_dir = "/content/drive/My Drive/Colab Notebooks/What-is-on-My-Skin/results"
 test_dir = "/content/drive/My Drive/Colab Notebooks/What-is-on-My-Skin/data/test"
 
 data_transforms = torch.load(os.path.join(base_dir, "data_transforms.pth"))
