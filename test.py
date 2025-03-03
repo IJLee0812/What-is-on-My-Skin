@@ -1,3 +1,5 @@
+# Running the model on the test data on 'Google Colaboratory'
+
 import os
 import torch
 import torch.nn as nn
